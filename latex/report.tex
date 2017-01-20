@@ -1,0 +1,80 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{datetime}
+\usepackage{fancyhdr}
+\usepackage{standalone}
+%Includes "References" in the table of contents
+\usepackage[nottoc]{tocbibind}
+
+
+%Title, date an author of the document
+%Define special date YYYY-mm-dd
+\newdateformat{specialdate}{\THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}}
+\date{\specialdate\today}
+\def\datemade{\specialdate\today}
+
+%Define paper
+\def\university{Umeå University}
+\def\instution{Institutionen för Datavetenskap}
+\def\pagetypename{Report}
+
+%Define course
+\def\coursename{}
+\def\coursecode{}
+\def\coursegiventerm{}
+\def\coursepoints{7.5 hp}
+\def\source{\url{~/edu/5DV122/lab1/}}
+\def\titleFrontPage{\coursename\\\coursepoints, \coursecode \coursegiventerm}
+
+%Define you.
+\def\csuser{jwestin}
+\def\casuser{jowe0017}
+\def\name{Jonathan Westin}
+\def\csuserE{dali}
+\def\casuserE{adli0015}
+\def\nameE{Adam Dahlgren}
+\def\uppgNr{2}
+\def\graders{2}
+
+
+%Header 
+%\setlength{\headheight}{15pt} 
+\setlength{\headheight}{27.11652pt} 
+\setlength{\headsep}{20pt} 
+
+\pagestyle{fancy}
+\fancyhead[LE,RO]{\datemade\\\nameE, \name}
+\fancyhead[RE,LO]{\coursename \coursegiventerm\\\university}
+\fancyfoot[CE,CO]{\leftmark}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%Begining of the document
+\begin{document}
+\input{frontpage}
+
+% Table of contents
+\tableofcontents
+\setcounter{page}{1}
+\thispagestyle{empty}
+\newpage
+
+
+\input{introduction}
+\input{system-structure}
+\input{tests}
+\input{work-delegation}
+\input{discussion-and-reflection}
+
+%Sets the bibliography style to UNSRT and imports the 
+%bibliography file "samples.bib".
+\bibliographystyle{alpha}
+\bibliography{reference}
+
+% Appendix 
+\appendix
+\input{assignment}
+\end{document}
+
