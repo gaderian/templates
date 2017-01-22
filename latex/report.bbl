@@ -1,12 +1,12 @@
-\begin{thebibliography}{AAA00}
+\begin{thebibliography}{1}
 
-\bibitem[AAA00]{MRDS}
+\bibitem{MRDS}
 AAAAAAAAAAAAAAAAAAAAAAA.
 \newblock {\em BBBBBBBBBBBBBBBBBBBBBBBBBB}.
 \newblock CCCCCCCCCCCCCCCCCCCCCC, 2000.
 \newblock ISBN: 0-262-13383-1.
 
-\bibitem[Mur00]{murhpy}
+\bibitem{murhpy}
 Robin~R. Murhpy.
 \newblock {\em Introduction to AI Robotics}.
 \newblock Massachusetts Institute of Technology, 2000.

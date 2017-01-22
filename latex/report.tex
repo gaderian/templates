@@ -21,23 +21,22 @@
 \def\pagetypename{Report}
 
 %Define course
-\def\coursename{}
-\def\coursecode{}
-\def\coursegiventerm{}
+\def\coursename{The course of latex}
+\def\coursecode{5DVXXX}
+\def\coursegiventerm{VT17}
 \def\coursepoints{7.5 hp}
-\def\source{\url{~/edu/5DV122/lab1/}}
-\def\titleFrontPage{\coursename\\\coursepoints, \coursecode \coursegiventerm}
+\def\source{\url{The source}}
+\def\titleFrontPage{\coursename\\\coursepoints, \coursecode, \coursegiventerm}
+\def\graders{The graders}
 
-%Define you.
-\def\csuser{jwestin}
-\def\casuser{jowe0017}
-\def\name{Jonathan Westin}
-\def\csuserE{dali}
-\def\casuserE{adli0015}
-\def\nameE{Adam Dahlgren}
-\def\uppgNr{2}
-\def\graders{2}
+%Define assignment 
+\def\assignmentnumber{1}
+\def\assignmentname{TestAssignment}
 
+%Labpartners (separate with comma)
+\def\csuser{}
+\def\casuser{}
+\def\name{}
 
 %Header 
 %\setlength{\headheight}{15pt} 
@@ -45,7 +44,7 @@
 \setlength{\headsep}{20pt} 
 
 \pagestyle{fancy}
-\fancyhead[LE,RO]{\datemade\\\nameE, \name}
+\fancyhead[LE,RO]{\datemade\\\name}
 \fancyhead[RE,LO]{\coursename \coursegiventerm\\\university}
 \fancyfoot[CE,CO]{\leftmark}
 \renewcommand{\headrulewidth}{1pt}
@@ -53,28 +52,30 @@
 
 %Begining of the document
 \begin{document}
+
+%Frontpage
 \input{frontpage}
 
-% Table of contents
+% TOC - Table Of Contents
 \tableofcontents
 \setcounter{page}{1}
 \thispagestyle{empty}
 \newpage
 
-
+% Sections of the report
 \input{introduction}
 \input{system-structure}
 \input{tests}
 \input{work-delegation}
 \input{discussion-and-reflection}
 
-%Sets the bibliography style to UNSRT and imports the 
-%bibliography file "samples.bib".
-\bibliographystyle{alpha}
+
+% Bibliography
+\bibliographystyle{plain}
 \bibliography{reference}
 
 % Appendix 
 \appendix
-\input{assignment}
+%\input{appendix_texfile}
 \end{document}
 
