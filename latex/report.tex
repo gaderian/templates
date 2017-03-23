@@ -44,9 +44,11 @@
 \setlength{\headsep}{20pt} 
 
 \pagestyle{fancy}
-\fancyhead[LE,RO]{\datemade\\\name}
-\fancyhead[RE,LO]{\coursename \coursegiventerm\\\university}
-\fancyfoot[CE,CO]{\leftmark}
+\fancyhead[LE,RO]{\name}
+\fancyhead[RE,LO]{\coursename\ \coursegiventerm}
+\fancyfoot[CE,CO]{\thepage} %\righmark for section name instead of page number
+\fancyfoot[LE,RO]{\datemade}
+\fancyfoot[RE,LO]{\university}
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
 
